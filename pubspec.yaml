@@ -36,7 +36,19 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+<<<<<<< HEAD
     - assets/images
+=======
+    - assets/images/집.png
+    - assets/images/한동대.png
+    - assets/images/동물의 숲.jpeg
+    - assets/images/한동의 숲.png
+    - assets/images/로고.png
+    - assets/images/너구리.webp
+    - assets/images/너구리2.webp
+    - assets/images/캐릭터.png
+    - assets/images/캐릭터3.webp
+>>>>>>> 2990d3dcb9afe4b3ecb1c0cea44de5d7ce5412f7
   fonts:
     - family: abcd
       fonts:
