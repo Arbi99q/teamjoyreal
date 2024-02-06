@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:async';
 import 'package:image_picker/image_picker.dart';
+import 'package:teamjoyreal/Register.dart';
 import 'dart:typed_data';
 import 'login.dart';
 
@@ -564,6 +565,10 @@ class NextStepPage extends StatelessWidget {
           const SizedBox(height: 20),
           ElevatedButton(
             onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const RegPage()),
+              );
               // Add navigation logic for the next step if needed
             },
             style: ElevatedButton.styleFrom(

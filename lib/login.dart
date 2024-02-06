@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:teamjoyreal/pwfind.dart';
+import 'package:teamjoyreal/pwphone.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -274,6 +276,10 @@ class FindPage extends StatelessWidget {
               const SizedBox(width: 20),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PhonePage()),
+                  );
                   // '아니오' 버튼이 클릭되었을 때 실행될 코드 추가
                 },
                 style: ElevatedButton.styleFrom(
