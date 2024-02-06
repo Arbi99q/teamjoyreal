@@ -314,12 +314,13 @@ class IDfindpage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
+        child: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Text(
-              '로그인',
+              '아이디 찾기',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -365,6 +366,7 @@ class IDfindpage extends StatelessWidget {
             ),
           ],
         ),
+      ),
       ),
     );
   }
