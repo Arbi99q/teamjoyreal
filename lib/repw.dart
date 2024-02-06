@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:teamjoyreal/login.dart';
 import 'package:teamjoyreal/phone.dart';
 
 void main() => runApp(const MyApp());
@@ -15,19 +16,19 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const RegPage(),
+      home: const RepwPage(),
     );
   }
 }
 
-class RegPage extends StatefulWidget {
-  const RegPage({Key? key}) : super(key: key);
+class RepwPage extends StatefulWidget {
+  const RepwPage({Key? key}) : super(key: key);
 
   @override
-  _RegPageState createState() => _RegPageState();
+  _RepwPageState createState() => _RepwPageState();
 }
 
-class _RegPageState extends State<RegPage> {
+class _RepwPageState extends State<RepwPage> {
 
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -48,7 +49,7 @@ class _RegPageState extends State<RegPage> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          '아래의 내용을\n기입해주세요.',
+          '비밀번호 재설정',
           textAlign: TextAlign.center,
           style: TextStyle(
             fontSize: 20.0,
@@ -83,10 +84,10 @@ class _RegPageState extends State<RegPage> {
           children: [
             Container(
               height: 250.7,
-              width: 130.7,
+              width: 150.7,
               decoration: const BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage('assets/images/hguforest_1.png'),
+                  image: AssetImage('assets/images/너구리2.webp'),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -96,56 +97,13 @@ class _RegPageState extends State<RegPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // 아이디 입력 폼 필드와 중복 확인 버튼을 포함한 Row
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextFormField(
-                          controller: _usernameController,
-                          decoration: const InputDecoration(
-                            labelText: '아이디',
-                            border: OutlineInputBorder(),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 8.0),
-                      TextButton(
-                        onPressed: () {
-                          // Check for duplicate username
-                          bool isUnique = isUsernameUnique(_usernameController.text);
-                          showDialog(
-                            context: context,
-                            builder: (context) {
-                              return AlertDialog(
-                                title: const Text('중복 확인'),
-                                content: Text(
-                                  isUnique
-                                      ? '중복된 아이디가 없습니다.'
-                                      : '중복된 아이디가 있습니다.',
-                                ),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () {
-                                      Navigator.pop(context);
-                                    },
-                                    child: const Text('확인'),
-                                  ),
-                                ],
-                              );
-                            },
-                          );
-                        },
-                        child: const Text('중복 확인'),
-                      ),
-                    ],
-                  ),
                   const SizedBox(height: 24.0),
                   // 비밀번호 입력 폼 필드
                   TextFormField(
                     controller: _passwordController,
                     obscureText: true,
                     decoration: const InputDecoration(
-                      labelText: '비밀번호',
+                      labelText: '새 비밀번호',
                       border: OutlineInputBorder(),
                     ),
                   ),
@@ -171,7 +129,7 @@ class _RegPageState extends State<RegPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const PhonePage(),
+                            builder: (context) => const LoginPage(),
                           ),
                         );
                       } else {
@@ -186,7 +144,6 @@ class _RegPageState extends State<RegPage> {
                                 TextButton(
                                   onPressed: () {
                                     Navigator.pop(context);
-
                                   },
                                   child: const Text('확인'),
                                 ),
