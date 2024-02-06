@@ -323,59 +323,59 @@ class IDfindpage extends StatelessWidget {
       ),
       body: SafeArea(
         child: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Text(
-              '아이디 찾기',
-              style: TextStyle(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const Text(
+                '아이디 찾기',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Image.asset(
-              'assets/images/너구리.webp',
-              width: 300, // 이미지 크기 조절 가능
-              height: 300,
-            ),
-            const SizedBox(height: 20),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: '이름을 입력하세요',
-                labelText: '이름을 입력하세요',
-                border: OutlineInputBorder(),
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/images/너구리.webp',
+                width: 300, // 이미지 크기 조절 가능
+                height: 300,
               ),
-            ),
-            const SizedBox(height: 10),
-            const TextField(
-              decoration: InputDecoration(
-                hintText: '학번을 입력하세요',
-                labelText: '학번을 입력하세요',
-                border: OutlineInputBorder(),
+              const SizedBox(height: 20),
+              const TextField(
+                decoration: InputDecoration(
+                  hintText: '이름을 입력하세요',
+                  labelText: '이름을 입력하세요',
+                  border: OutlineInputBorder(),
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                      builder: (context) => const IDconfirmpage()),
-                );
-              },
-              child: const Text('다음으로'),
-            ),
-            const SizedBox(height: 20),
-            Image.asset(
-              'assets/images/로고.png',
-              width: 100, // 로고 이미지 크기 조절 가능
-              height: 100,
-            ),
-          ],
+              const SizedBox(height: 10),
+              const TextField(
+                decoration: InputDecoration(
+                  hintText: '학번을 입력하세요',
+                  labelText: '학번을 입력하세요',
+                  border: OutlineInputBorder(),
+                ),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const IDconfirmpage()),
+                  );
+                },
+                child: const Text('다음으로'),
+              ),
+              const SizedBox(height: 20),
+              Image.asset(
+                'assets/images/로고.png',
+                width: 100, // 로고 이미지 크기 조절 가능
+                height: 100,
+              ),
+            ],
+          ),
         ),
-      ),
       ),
     );
   }
@@ -430,6 +430,12 @@ class IDconfirmpage extends StatelessWidget {
               const SizedBox(height: 10),
               ElevatedButton(
                 onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PhonePage(), // 이 부분 수정
+                    ),
+                  );
                   // 비밀번호 찾기 동작 추가
                   // 예를 들어, Navigator.push를 사용하여 비밀번호 찾기 화면으로 이동할 수 있습니다.
                 },
