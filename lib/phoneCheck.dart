@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:teamjoyreal/phone.dart';
 import 'package:teamjoyreal/Register.dart';
+import 'package:teamjoyreal/login.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   final TextEditingController _phoneController = TextEditingController();
-
 
   MyApp({Key? key}) : super(key: key);
 
@@ -108,7 +108,8 @@ class _PhonePageState extends State<PhonePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PhoneCheckPage(phoneNumber: widget.phoneController.text),
+                          builder: (context) => PhoneCheckPage(
+                              phoneNumber: widget.phoneController.text),
                         ),
                       );
                     },
@@ -141,7 +142,8 @@ class PhoneCheckPage extends StatefulWidget {
 }
 
 class _PhoneCheckPageState extends State<PhoneCheckPage> {
-  final TextEditingController _verificationCodeController = TextEditingController();
+  final TextEditingController _verificationCodeController =
+      TextEditingController();
   bool isVerificationCodeSent = false;
 
   void sendVerificationCode() {
@@ -233,6 +235,11 @@ class _PhoneCheckPageState extends State<PhoneCheckPage> {
                   const SizedBox(height: 16.0),
                   ElevatedButton(
                     onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()),
+                      );
                       // Password validation logic can be added here
                       sendVerificationCode();
                       setState(() {
