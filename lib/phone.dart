@@ -1,5 +1,3 @@
-// ignore_for_file: invalid_super_invocation
-
 import 'package:flutter/material.dart';
 import 'package:teamjoyreal/phoneCheck.dart';
 
