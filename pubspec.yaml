@@ -1,8 +1,5 @@
 name: teamjoyreal
 description: "A new Flutter project."
-
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -36,18 +33,19 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/images/집.png
-    - assets/images/한동대.png
-    - assets/images/동물의 숲.jpeg
-    - assets/images/한동의 숲.png
-    - assets/images/로고.png
-    - assets/images/너구리.webp
-    - assets/images/너구리2.webp
-    - assets/images/캐릭터.png
-    - assets/images/캐릭터3.webp
+      - assets/images/집.png
+      - assets/images/한동대.png
+      - assets/images/동물의 숲.jpeg
+      - assets/images/한동의 숲.png
+      - assets/images/로고.png
+      - assets/images/너구리.webp
+      - assets/images/너구리2.webp
+      - assets/images/캐릭터.png
+      - assets/images/캐릭터3.webp
+      - assets/images/hguforest_1.png
+      - assets/images/hguforest_logo.png
+
   fonts:
     - family: abcd
       fonts:
         - asset: assets/fonts/abcd.ttf
-          
-        
