@@ -4,9 +4,7 @@ import 'package:teamjoyreal/phone.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key:key);
-
-
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,10 +26,10 @@ class RegPage extends StatefulWidget {
 }
 
 class _RegPageState extends State<RegPage> {
-
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _confirmPasswordController = TextEditingController();
+  final TextEditingController _confirmPasswordController =
+      TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
 
   bool isLoggedIn = false;
@@ -112,7 +110,8 @@ class _RegPageState extends State<RegPage> {
                       TextButton(
                         onPressed: () {
                           // Check for duplicate username
-                          bool isUnique = isUsernameUnique(_usernameController.text);
+                          bool isUnique =
+                              isUsernameUnique(_usernameController.text);
                           showDialog(
                             context: context,
                             builder: (context) {
@@ -163,39 +162,40 @@ class _RegPageState extends State<RegPage> {
                   ElevatedButton(
                     onPressed: isUsernameUnique(_usernameController.text)
                         ? () {
-                      // 비밀번호와 비밀번호 확인이 일치하는지 여부 확인
-                      if (_passwordController.text == _confirmPasswordController.text) {
-                        setState(() {
-                          isLoggedIn = true;
-                        });
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const PhonePage(),
-                          ),
-                        );
-                      } else {
-                        // 비밀번호와 비밀번호 확인이 일치하지 않을 때의 처리
-                        showDialog(
-                          context: context,
-                          builder: (context) {
-                            return AlertDialog(
-                              title: const Text('비밀번호 확인 오류'),
-                              content: const Text('비밀번호와 비밀번호 확인이 일치하지 않습니다.'),
-                              actions: [
-                                TextButton(
-                                  onPressed: () {
-                                    Navigator.pop(context);
-
-                                  },
-                                  child: const Text('확인'),
+                            // 비밀번호와 비밀번호 확인이 일치하는지 여부 확인
+                            if (_passwordController.text ==
+                                _confirmPasswordController.text) {
+                              setState(() {
+                                isLoggedIn = true;
+                              });
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const PhonePage(),
                                 ),
-                              ],
-                            );
-                          },
-                        );
-                      }
-                    }
+                              );
+                            } else {
+                              // 비밀번호와 비밀번호 확인이 일치하지 않을 때의 처리
+                              showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                    title: const Text('비밀번호 확인 오류'),
+                                    content:
+                                        const Text('비밀번호와 비밀번호 확인이 일치하지 않습니다.'),
+                                    actions: [
+                                      TextButton(
+                                        onPressed: () {
+                                          Navigator.pop(context);
+                                        },
+                                        child: const Text('확인'),
+                                      ),
+                                    ],
+                                  );
+                                },
+                              );
+                            }
+                          }
                         : null, // 사용자 이름이 고유하지 않으면 onPressed를 null로 설정
                     child: const Text('완료'),
                   ),

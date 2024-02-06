@@ -24,32 +24,31 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('로그인 페이지'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: SingleChildScrollView(
-         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/images/캐릭터3.webp',
-              width: 300,
-              height: 300,
-            ),
-            // 로그인 폼 위젯
-            LoginForm(
-              usernameController: _usernameController,
-              passwordController: _passwordController,
-              onLoginPressed: _handleLogin,
-              isLoading: _isLoading,
-            ),
-          ],
+        appBar: AppBar(
+          title: const Text('로그인 페이지'),
         ),
-      ),
-      )
-    );
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Image.asset(
+                  'assets/images/캐릭터3.webp',
+                  width: 300,
+                  height: 300,
+                ),
+                // 로그인 폼 위젯
+                LoginForm(
+                  usernameController: _usernameController,
+                  passwordController: _passwordController,
+                  onLoginPressed: _handleLogin,
+                  isLoading: _isLoading,
+                ),
+              ],
+            ),
+          ),
+        ));
   }
 
   void startLoading() {
@@ -319,6 +318,9 @@ class IDfindpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(''),
+      ),
       body: SafeArea(
         child: SingleChildScrollView(
         child: Column(
@@ -359,7 +361,8 @@ class IDfindpage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const IDconfirmpage()),
+                  MaterialPageRoute(
+                      builder: (context) => const IDconfirmpage()),
                 );
               },
               child: const Text('다음으로'),
@@ -384,6 +387,9 @@ class IDconfirmpage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text(''),
+      ),
       body: SafeArea(
         child: Center(
           child: Column(
@@ -399,8 +405,8 @@ class IDconfirmpage extends StatelessWidget {
               const SizedBox(height: 20),
               Image.asset(
                 'assets/images/너구리.webp',
-                width: 300,
-                height: 300,
+                width: 400,
+                height: 400,
               ),
               const SizedBox(height: 20),
               const Text(

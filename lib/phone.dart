@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:teamjoyreal/phoneCheck.dart';
 
-
-
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +27,8 @@ class PhonePage extends StatefulWidget {
 
 class _PhonePageState extends State<PhonePage> {
   final TextEditingController _phoneController = TextEditingController();
-  final TextEditingController _verificationCodeController = TextEditingController();
+  final TextEditingController _verificationCodeController =
+      TextEditingController();
   bool isVerificationCodeSent = false;
 
   void sendVerificationCode() {
@@ -112,7 +110,8 @@ class _PhonePageState extends State<PhonePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PhoneCheckPage(phoneNumber: _phoneController.text),
+                          builder: (context) => PhoneCheckPage(
+                              phoneNumber: _phoneController.text),
                         ),
                       );
                       setState(() {

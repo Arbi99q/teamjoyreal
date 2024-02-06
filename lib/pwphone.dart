@@ -7,7 +7,6 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   final TextEditingController _phoneController = TextEditingController();
 
-
   MyApp({Key? key}) : super(key: key);
 
   @override
@@ -25,7 +24,8 @@ class MyApp extends StatelessWidget {
 class PwPhonePage extends StatefulWidget {
   final TextEditingController phoneController;
 
-  const PwPhonePage({Key? key, required this.phoneController}) : super(key: key);
+  const PwPhonePage({Key? key, required this.phoneController})
+      : super(key: key);
 
   @override
   _PwPhonePageState createState() => _PwPhonePageState();
@@ -108,7 +108,7 @@ class _PwPhonePageState extends State<PwPhonePage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => RepwPage(),
+                          builder: (context) => const RepwPage(),
                         ),
                       );
                     },
@@ -134,14 +134,16 @@ class _PwPhonePageState extends State<PwPhonePage> {
 class PwPhoneCheckPage extends StatefulWidget {
   final String phoneNumber;
 
-  const PwPhoneCheckPage({Key? key, required this.phoneNumber}) : super(key: key);
+  const PwPhoneCheckPage({Key? key, required this.phoneNumber})
+      : super(key: key);
 
   @override
   _PwPhoneCheckPageState createState() => _PwPhoneCheckPageState();
 }
 
 class _PwPhoneCheckPageState extends State<PwPhoneCheckPage> {
-  final TextEditingController _verificationCodeController = TextEditingController();
+  final TextEditingController _verificationCodeController =
+      TextEditingController();
   bool isVerificationCodeSent = false;
 
   void sendVerificationCode() {
@@ -237,7 +239,7 @@ class _PwPhoneCheckPageState extends State<PwPhoneCheckPage> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => RepwPage(),
+                          builder: (context) => const RepwPage(),
                         ),
                       );
                       sendVerificationCode();
