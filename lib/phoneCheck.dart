@@ -8,7 +8,7 @@ class MyApp extends StatelessWidget {
   final TextEditingController _phoneController = TextEditingController();
 
 
-  MyApp({super.key});
+  MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
 class PhonePage extends StatefulWidget {
   final TextEditingController phoneController;
 
-  const PhonePage({super.key, required this.phoneController});
+  const PhonePage({Key? key, required this.phoneController}) : super(key: key);
 
   @override
   _PhonePageState createState() => _PhonePageState();
@@ -134,7 +134,7 @@ class _PhonePageState extends State<PhonePage> {
 class PhoneCheckPage extends StatefulWidget {
   final String phoneNumber;
 
-  const PhoneCheckPage({super.key, required this.phoneNumber});
+  const PhoneCheckPage({Key? key, required this.phoneNumber}) : super(key: key);
 
   @override
   _PhoneCheckPageState createState() => _PhoneCheckPageState();

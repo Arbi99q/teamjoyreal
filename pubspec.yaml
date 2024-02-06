@@ -1,22 +1,8 @@
 name: teamjoyreal
 description: "A new Flutter project."
 
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: 'none'
 
-# The following defines the version and build number for your application.
-# A version number is three numbers separated by dots, like 1.2.43
-# followed by an optional build number separated by a +.
-# Both the version and the builder number may be overridden in flutter
-# build by specifying --build-name and --build-number, respectively.
-# In Android, build-name is used as versionName while build-number used as versionCode.
-# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
-# Read more about iOS versioning at
-# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
@@ -36,22 +22,18 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-<<<<<<< HEAD
-    - assets/images
-=======
-    - assets/images/집.png
-    - assets/images/한동대.png
-    - assets/images/동물의 숲.jpeg
-    - assets/images/한동의 숲.png
-    - assets/images/로고.png
-    - assets/images/너구리.webp
-    - assets/images/너구리2.webp
-    - assets/images/캐릭터.png
-    - assets/images/캐릭터3.webp
->>>>>>> 2990d3dcb9afe4b3ecb1c0cea44de5d7ce5412f7
+      - assets/images/집.png
+      - assets/images/한동대.png
+      - assets/images/동물의 숲.jpeg
+      - assets/images/한동의 숲.png
+      - assets/images/로고.png
+      - assets/images/너구리.webp
+      - assets/images/너구리2.webp
+      - assets/images/캐릭터.png
+      - assets/images/캐릭터3.webp
+      - assets/images/hguforest_1.png
+      - assets/images/hguforest_logo.png
   fonts:
     - family: abcd
       fonts:
         - asset: assets/fonts/abcd.ttf
-          
-        

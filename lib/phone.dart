@@ -1,10 +1,14 @@
+// ignore_for_file: invalid_super_invocation
+
 import 'package:flutter/material.dart';
 import 'package:teamjoyreal/phoneCheck.dart';
+
+
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key: key);
 
 
   @override
@@ -20,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class PhonePage extends StatefulWidget {
-  const PhonePage({super.key});
+  const PhonePage({Key? key}) : super(key: key);
 
   @override
   _PhonePageState createState() => _PhonePageState();

@@ -4,7 +4,7 @@ import 'package:teamjoyreal/phone.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key}) : super(key:key);
 
 
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
 }
 
 class RegPage extends StatefulWidget {
-  const RegPage({super.key});
+  const RegPage({Key? key}) : super(key: key);
 
   @override
   _RegPageState createState() => _RegPageState();
